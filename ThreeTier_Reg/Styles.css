@@ -1,0 +1,218 @@
+﻿/* General Reset & Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Validation Error Styling */
+.error {
+    color: #e74c3c; /* A modern red shade */
+    font-size: 12px; /* Slightly smaller than main text */
+    font-weight: 600; /* Semi-bold to make it noticeable */
+    margin-top: 4px; /* Small gap below the textbox */
+    display: block; /* Ensures the error moves to its own line */
+    font-style: italic; /* Optional: helps distinguish from labels */
+}
+
+    /* Optional: Highlight the textbox border when invalid (advanced) */
+    input.aspNetDisabled, .error + input {
+        border-color: #e74c3c;
+    }
+/* Card Style for Form and Grid */
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+h2, h3 {
+    color: #1a2a3a;
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 10px;
+}
+
+/* Form Layout using CSS Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label {
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 0.9em;
+        color: #444;
+    }
+
+/* Input Styling */
+/* Update this section in your StyleSheet.css */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 100%; /* This makes it fill the form-group container */
+    box-sizing: border-box; /* Ensures padding doesn't push the width over 100% */
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Button Section */
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 25px 0;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.btn-submit {
+    background: #2ecc71;
+    color: white;
+}
+
+.btn-update {
+    background: #3498db;
+    color: white;
+}
+
+.btn-delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-reset {
+    background: #7f8c8d;
+    color: white;
+}
+
+.btn-fetch {
+    background: #f39c12;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 8px;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* GridView Styling */
+/* Grid Section - Dynamic Scaling */
+.grid-container {
+    margin-top: 30px;
+    width: 100%; /* Fill the card */
+}
+
+.grid-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Adds a scrollbar ONLY if content is wider than the screen */
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.modern-grid {
+    width: 100%; /* Stretch to fill container */
+    min-width: 800px; /* Ensures columns don't get squished on small screens */
+    border-collapse: collapse;
+    background-color: white;
+    white-space: nowrap; /* Keeps data on one line so the table "slides" horizontally */
+}
+
+    .modern-grid th {
+        background-color: #f8f9fa;
+        color: #2c3e50;
+        padding: 15px;
+        text-align: left;
+        font-size: 0.9em;
+        border-bottom: 2px solid #3498db; /* Blue accent line */
+    }
+
+    .modern-grid td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #f1f1f1;
+        color: #555;
+        font-size: 0.85em;
+    }
+
+    /* Zebra striping for better readability */
+    .modern-grid tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+
+    .modern-grid tr:hover {
+        background-color: #f1f8ff; /* Subtle highlight on hover */
+        transition: background-color 0.2s;
+    }
+/* Container for the 3 dropdowns */
+.dob-container {
+    display: flex;
+    gap: 10px; /* Space between Day, Month, and Year */
+    width: 100%;
+}
+
+/* Specific styling for dropdowns inside the DOB container */
+/* Container for the 3 dropdowns */
+.dob-container {
+    display: flex;
+    gap: 10px; /* Clean space between boxes */
+    justify-content: flex-start; /* Keeps them aligned to the left */
+    margin-top: 5px;
+}
+
+    /* Target only the dropdowns inside the DOB container */
+    .dob-container select {
+        width: auto; /* Stop stretching to 100% */
+        min-width: 80px; /* Ensure they are wide enough for the text */
+        flex: none; /* Disable the 'greedy' flex growth */
+        padding: 8px;
+    }
+
+        /* Optional: Make the Month slightly wider than Day/Year */
+        .dob-container select[id*="ddlMonth"] {
+            min-width: 110px;
+        }
+/* Status Label */
+#lblDisplay {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+}

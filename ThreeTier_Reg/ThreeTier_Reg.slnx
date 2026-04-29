@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="../BLLR/BLLR.csproj" />
+  <Project Path="../DALR/DALR.csproj" />
   <Project Path="ThreeTier_Reg.csproj" />
 </Solution>
